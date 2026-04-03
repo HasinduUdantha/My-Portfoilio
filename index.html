@@ -274,11 +274,12 @@
     transition: all .25s; cursor:default;
     position:relative; overflow:hidden;
   }
-  .project-card::before {
-    content:''; position:absolute; inset:0;
-    background: linear-gradient(135deg, rgba(124,92,252,.05) 0%, transparent 60%);
-    opacity:0; transition:opacity .3s;
-  }
+.project-card::before {
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(135deg, rgba(124,92,252,.05) 0%, transparent 60%);
+  opacity:0; transition:opacity .3s;
+  pointer-events: none;
+}
   .project-card:hover { border-color:rgba(124,92,252,.35); transform:translateY(-3px); box-shadow:0 12px 40px rgba(0,0,0,.4); }
   .project-card:hover::before { opacity:1; }
   .project-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:1rem; gap:1rem; }
